@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Trang profile cá nhân cho model, brand talent và creator với video portfolio, ảnh và thông tin booking."
+    />
+    <title>Lê Quốc Anh Cao | Model & Brand Talent</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <div class="brand-wrap">
+          <div class="brand-mark">L</div>
+          <div>
+            <p class="brand-name">Lê Quốc Anh</p>
+            <span class="brand-role">Model / Brand Talent</span>
+          </div>
+        </div>
+        <nav class="main-nav">
+          <a href="#about">Giới thiệu</a>
+          <a href="#portfolio">Portfolio</a>
+          <a href="#videos">Video</a>
+          <a href="#booking">Booking</a>
+        </nav>
+        <a href="#booking" class="btn btn-primary">Book now</a>
+      </header>
+
+      <main>
+        <section class="hero section">
+          <div class="hero-copy">
+            <p class="eyebrow">Fashion • Commercial • Lifestyle</p>
+            <h1>
+              Tạo ấn tượng bằng <span>dáng vẻ</span> và sự tự tin trong từng khung hình.
+            </h1>
+            <p class="lead" id="profile-summary">
+              Tôi là Lê Quốc Anh Cao, nam model 21 tuổi với chiều cao 1m80, cân nặng 68kg,
+              thân hình gọn, săn chắc và vai rộng. Với phong cách nam tính, hiện đại và năng động,
+              tôi phù hợp cho các dự án thời trang, thương hiệu, campaign quảng cáo và nội dung hình ảnh.
+            </p>
+            <div class="cta-row">
+              <a href="#booking" class="btn btn-primary">Đặt lịch chụp</a>
+              <a href="#portfolio" class="btn btn-secondary">Xem portfolio</a>
+            </div>
+            <div class="stats-row" id="stats-row"></div>
+          </div>
+
+          <div class="hero-visual">
+            <div class="portrait-card">
+              <img id="hero-image" src="" alt="Model portrait" />
+              <div class="floating-badge">
+                <strong>Available</strong>
+                <span>for campaigns & events</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="about" class="section about-grid">
+          <div class="section-heading left">
+            <p class="eyebrow">Về tôi</p>
+            <h2>Model nam với hình thể cân đối, phong cách hiện đại và khả năng truyền cảm hứng.</h2>
+          </div>
+
+          <div class="about-content">
+            <div class="about-text">
+              <p>
+                Tôi là một model nam trẻ với vẻ ngoài khỏe khoắn, góc nhìn thời trang rõ ràng và thái độ làm việc chuyên nghiệp.
+                Với dáng người cân đối, body săn chắc và vai rộng, tôi phù hợp với nhiều phong cách từ thời trang cao cấp đến thương hiệu lifestyle hiện đại.
+              </p>
+              <p>
+                Tôi sẵn sàng hợp tác với agency, studio, brand, production house và các dự án cần hình ảnh nam tính, tự tin và ấn tượng.
+                Mỗi shoot của tôi đều hướng tới sự tự nhiên, sắc sảo và khả năng truyền tải thông điệp thương hiệu một cách rõ nét.
+              </p>
+            </div>
+
+            <div class="info-card">
+              <div class="info-row">
+                <span>Chiều cao</span>
+                <strong>1m80</strong>
+              </div>
+              <div class="info-row">
+                <span>Cân nặng</span>
+                <strong>68kg</strong>
+              </div>
+              <div class="info-row">
+                <span>Tuổi</span>
+                <strong>21</strong>
+              </div>
+              <div class="info-row">
+                <span>Body</span>
+                <strong>Gọn, không mỡ, vai rộng</strong>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section skill-section">
+          <div class="section-heading center">
+            <p class="eyebrow">Kỹ năng</p>
+            <h2>Những thế mạnh tôi mang đến cho dự án</h2>
+          </div>
+          <div class="skills" id="skills-list"></div>
+        </section>
+
+        <section id="portfolio" class="section portfolio-section">
+          <div class="section-heading between">
+            <div>
+              <p class="eyebrow">Portfolio</p>
+              <h2>Ảnh nổi bật</h2>
+            </div>
+            <a href="#booking" class="text-link">Booking ngay</a>
+          </div>
+          <div class="gallery-grid" id="gallery-grid"></div>
+        </section>
+
+        <section id="videos" class="section video-section">
+          <div class="section-heading left">
+            <p class="eyebrow">Video</p>
+            <h2>Showreel & video profile</h2>
+          </div>
+
+          <div class="video-layout">
+            <div class="video-feature">
+              <video
+                id="main-video"
+                controls
+                playsinline
+                preload="metadata"
+                poster="assets/images/IMG_3713.jpeg"
+              >
+                <source src="assets/images/1.mp4" type="video/mp4" />
+              </video>
+            </div>
+
+            <aside class="video-list" id="video-list"></aside>
+          </div>
+        </section>
+
+        <section id="booking" class="section booking-section">
+          <div class="booking-panel">
+            <div class="booking-copy">
+              <p class="eyebrow">Booking</p>
+              <h2>Sẵn sàng hợp tác với brand, agency và studio chuyên nghiệp.</h2>
+              <p>
+                Tôi mở cửa cho các cơ hội từ campaign thương hiệu, shoot thời trang, nội dung quảng cáo,
+                event, popup, livestream và các dự án cần hình ảnh nam tính, hiện đại và có sức hút.
+              </p>
+              <div class="contact-list">
+                <span>Phone / Zalo: 0368309653</span>
+                <span>Facebook: <a href="https://www.facebook.com/qanh.le.771/" target="_blank" rel="noreferrer">qanh.le.771</a></span>
+                <span>Booking: Tư vấn, hợp tác và chụp hình theo yêu cầu dự án</span>
+              </div>
+            </div>
+
+            <div class="booking-card">
+              <h3>Thông tin nhanh</h3>
+              <ul>
+                <li>Available for fashion editorial</li>
+                <li>Commercial & brand campaigns</li>
+                <li>Event & live appearance</li>
+                <li>Social / short-form video</li>
+              </ul>
+              <a href="tel:+84368309653" class="btn btn-primary full-width">Gọi / Zalo booking</a>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <p>© <span id="year"></span> Lê Quốc Anh. All rights reserved.</p>
+      </footer>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
