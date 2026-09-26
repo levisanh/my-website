@@ -11,7 +11,9 @@ const profile = {
     'Brand ambassador',
     'Photoshoot studio',
     'Lifestyle content',
-    'Event appearance'
+    'Event appearance',
+    'Livestream',
+    'Quay video ngắn'
   ],
   gallery: [
     '798A4729-2_Original.JPG',
@@ -64,11 +66,11 @@ profile.gallery.forEach((filename, index) => {
 
   card.className = 'gallery-item';
   image.src = `assets/images/${filename}`;
-  image.alt = `Lê Quốc Anh Cao — ảnh portfolio ${index + 1}`;
+  image.alt = `Lê Quốc Anh — ảnh portfolio ${index + 1}`;
   image.loading = 'lazy';
   image.decoding = 'async';
-  title.textContent = `Selected work ${String(index + 1).padStart(2, '0')}`;
-  number.textContent = 'LQAC';
+  title.textContent = `Ảnh ${String(index + 1).padStart(2, '0')}`;
+  number.textContent = 'Lê Quốc Anh';
   caption.append(title, number);
   card.append(image, caption);
   galleryGrid.append(card);
