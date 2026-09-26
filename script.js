@@ -1,115 +1,77 @@
 const profile = {
-  heroImage: 'assets/images/2026_01_10_23_51_IMG_0586.png',
   stats: [
-    { value: '1m80', label: 'chiều cao' },
-    { value: '68kg', label: 'cân nặng' },
-    { value: '21', label: 'tuổi' },
-    { value: 'Vai rộng', label: 'dáng vững' }
+    { value: '1m80', label: 'Chiều cao' },
+    { value: '68kg', label: 'Cân nặng' },
+    { value: '21', label: 'Tuổi' },
+    { value: 'Nam', label: 'Người mẫu' }
   ],
   skills: [
-    'Model nam thời trang',
+    'Fashion editorial',
     'Commercial campaign',
     'Brand ambassador',
     'Photoshoot studio',
-    'Event appearance',
-    'Lifestyle & social content',
-    'Body fit / fashion look',
-    'Portrait & photographer',
-    'Web design & creative coding',
-    'Content creation'
+    'Lifestyle content',
+    'Event appearance'
   ],
   gallery: [
-    { title: 'Editorial look', image: 'assets/images/IMG_2331.JPG' },
-    { title: 'Luxury campaign', image: 'assets/images/IMG_3713.jpeg' },
-    { title: 'Studio portrait', image: 'assets/images/IMG_5971.JPG' },
-    { title: 'City style', image: 'assets/images/IMG_7135.JPG' },
-    { title: 'Beauty close-up', image: 'assets/images/IMG_2331.JPG' },
-    { title: 'Campaign aesthetic', image: 'assets/images/IMG_3713.jpeg' }
-  ],
-  videos: [
-    {
-      title: 'Showreel body',
-      duration: '00:58',
-      thumbnail: 'assets/images/IMG_3713.jpeg',
-      url: 'assets/images/1.mp4'
-    },
-    {
-      title: 'Behind the scenes',
-      duration: '01:24',
-      thumbnail: 'assets/images/IMG_5971.JPG',
-      url: 'assets/images/1.mp4'
-    },
-    {
-      title: 'Beauty lookbook',
-      duration: '00:46',
-      thumbnail: 'assets/images/IMG_7135.JPG',
-      url: 'assets/images/1.mp4'
-    }
+    '798A4729-2_Original.JPG',
+    '798A4903_Original.JPG',
+    '798A5029_Original.JPG',
+    '798A5047_Original.JPG',
+    'A7401175.jpeg',
+    'A7401181.jpeg',
+    'A7401388.jpeg',
+    'IMG_2306_Original.JPG',
+    'IMG_2377_Original.JPG',
+    'IMG_2436.JPG',
+    'IMG_2578_Original.JPG',
+    'IMG_8539_Original.JPG',
+    'IMG_9775.JPG',
+    'IMG_9779.JPG'
   ]
 };
 
-const heroImage = document.getElementById('hero-image');
 const statsRow = document.getElementById('stats-row');
 const skillsList = document.getElementById('skills-list');
 const galleryGrid = document.getElementById('gallery-grid');
-const videoList = document.getElementById('video-list');
 const yearNode = document.getElementById('year');
-const featureVideo = document.querySelector('.video-feature video');
-
-if (heroImage && profile.heroImage) {
-  heroImage.src = profile.heroImage;
-}
 
 profile.stats.forEach((stat) => {
   const box = document.createElement('div');
+  const value = document.createElement('strong');
+  const label = document.createElement('span');
+
   box.className = 'stat-box';
-  box.innerHTML = `<strong>${stat.value}</strong><span>${stat.label}</span>`;
-  statsRow.appendChild(box);
+  value.textContent = stat.value;
+  label.textContent = stat.label;
+  box.append(value, label);
+  statsRow.append(box);
 });
 
 profile.skills.forEach((skill) => {
   const tag = document.createElement('span');
   tag.className = 'skill-tag';
   tag.textContent = skill;
-  skillsList.appendChild(tag);
+  skillsList.append(tag);
 });
 
-profile.gallery.forEach((item) => {
+profile.gallery.forEach((filename, index) => {
   const card = document.createElement('figure');
+  const image = document.createElement('img');
+  const caption = document.createElement('figcaption');
+  const title = document.createElement('span');
+  const number = document.createElement('span');
+
   card.className = 'gallery-item';
-  card.innerHTML = `
-    <img src="${item.image}" alt="${item.title}" />
-    <figcaption class="caption">${item.title}</figcaption>
-  `;
-  galleryGrid.appendChild(card);
-});
-
-profile.videos.forEach((video, index) => {
-  const item = document.createElement('button');
-  item.type = 'button';
-  item.className = 'video-item';
-  if (index === 0) item.classList.add('active');
-  item.setAttribute('aria-label', `Play ${video.title}`);
-  item.innerHTML = `
-    <div class="video-thumbnail">
-      <img src="${video.thumbnail}" alt="${video.title}" />
-      <span class="video-duration">${video.duration}</span>
-    </div>
-    <div class="video-meta">
-      <h4>${video.title}</h4>
-      <p>Portfolio reel</p>
-    </div>
-  `;
-
-  item.addEventListener('click', () => {
-    document.querySelectorAll('.video-item').forEach((el) => el.classList.remove('active'));
-    item.classList.add('active');
-    featureVideo.src = video.url;
-    featureVideo.load();
-    featureVideo.play();
-  });
-
-  videoList.appendChild(item);
+  image.src = `assets/images/${filename}`;
+  image.alt = `Lê Quốc Anh Cao — ảnh portfolio ${index + 1}`;
+  image.loading = 'lazy';
+  image.decoding = 'async';
+  title.textContent = `Selected work ${String(index + 1).padStart(2, '0')}`;
+  number.textContent = 'LQAC';
+  caption.append(title, number);
+  card.append(image, caption);
+  galleryGrid.append(card);
 });
 
 yearNode.textContent = new Date().getFullYear();

@@ -5,179 +5,136 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Trang profile cá nhân cho model, brand talent và creator với video portfolio, ảnh và thông tin booking."
+      content="Portfolio người mẫu của Lê Quốc Anh Cao: thời trang, commercial, lifestyle và thông tin booking."
     />
-    <title>Lê Quốc Anh Cao | Model & Brand Talent</title>
+    <meta name="theme-color" content="#f2f0eb" />
+    <title>Lê Quốc Anh Cao — Model Portfolio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="editorial.css" />
   </head>
   <body>
     <div class="page-shell">
       <header class="topbar">
-        <div class="brand-wrap">
-          <div class="brand-mark">L</div>
-          <div>
-            <p class="brand-name">Lê Quốc Anh</p>
-            <span class="brand-role">Model / Brand Talent</span>
-          </div>
-        </div>
-        <nav class="main-nav">
-          <a href="#about">Giới thiệu</a>
+        <a class="brand" href="#top" aria-label="Lê Quốc Anh Cao, đầu trang">
+          <span class="brand-mark">QA</span>
+          <span class="brand-copy">
+            <strong>Lê Quốc Anh Cao</strong>
+            <small>Model portfolio · Vietnam</small>
+          </span>
+        </a>
+        <nav class="main-nav" aria-label="Điều hướng chính">
+          <a href="#about">Hồ sơ</a>
           <a href="#portfolio">Portfolio</a>
-          <a href="#videos">Video</a>
-          <a href="#booking">Booking</a>
+          <a href="#showreel">Showreel</a>
         </nav>
-        <a href="#booking" class="btn btn-primary">Book now</a>
+        <a href="#booking" class="nav-contact">Liên hệ <span aria-hidden="true">↗</span></a>
       </header>
 
       <main>
-        <section class="hero section">
+        <section class="hero" aria-labelledby="hero-title">
           <div class="hero-copy">
-            <p class="eyebrow">Fashion • Commercial • Lifestyle</p>
-            <h1>
-              Tạo ấn tượng bằng <span>dáng vẻ</span> và sự tự tin trong từng khung hình.
-            </h1>
-            <p class="lead" id="profile-summary">
-              Tôi là Lê Quốc Anh Cao, nam model 21 tuổi với chiều cao 1m80, cân nặng 68kg,
-              thân hình gọn, săn chắc và vai rộng. Với phong cách nam tính, hiện đại và năng động,
-              tôi phù hợp cho các dự án thời trang, thương hiệu, campaign quảng cáo và nội dung hình ảnh.
+            <p class="eyebrow"><span class="eyebrow-line"></span> Fashion · Commercial · Lifestyle</p>
+            <h1 id="hero-title">Lê Quốc<br /><em>Anh Cao.</em></h1>
+            <p class="hero-description">
+              Người mẫu nam với phong thái hiện đại, hình thể cân đối và khả năng biến hóa trước ống kính.
             </p>
-            <div class="cta-row">
-              <a href="#booking" class="btn btn-primary">Đặt lịch chụp</a>
-              <a href="#portfolio" class="btn btn-secondary">Xem portfolio</a>
+            <div class="hero-actions">
+              <a class="button button-dark" href="#portfolio">Khám phá portfolio <span aria-hidden="true">↘</span></a>
+              <a class="quiet-link" href="#booking">Hợp tác cùng tôi <span aria-hidden="true">↗</span></a>
             </div>
-            <div class="stats-row" id="stats-row"></div>
+            <div class="hero-index"><span>01</span><span class="index-rule"></span><span>MODEL / CREATIVE</span></div>
           </div>
-
           <div class="hero-visual">
-            <div class="portrait-card">
-              <img id="hero-image" src="" alt="Model portrait" />
-              <div class="floating-badge">
-                <strong>Available</strong>
-                <span>for campaigns & events</span>
-              </div>
-            </div>
+            <img
+              id="hero-image"
+              src="assets/images/798A4729-2_Original.JPG"
+              alt="Lê Quốc Anh Cao trong bộ ảnh portfolio thời trang"
+              fetchpriority="high"
+            />
+            <span class="image-note">SELECTED PORTRAIT&nbsp; / &nbsp;2026</span>
+            <span class="hero-stamp" aria-hidden="true">LQ<br />AC</span>
           </div>
         </section>
 
-        <section id="about" class="section about-grid">
-          <div class="section-heading left">
-            <p class="eyebrow">Về tôi</p>
-            <h2>Model nam với hình thể cân đối, phong cách hiện đại và khả năng truyền cảm hứng.</h2>
-          </div>
+        <section class="profile-strip" aria-label="Thông tin người mẫu">
+          <div class="strip-label">Thông số</div>
+          <div class="stats-row" id="stats-row"></div>
+          <div class="strip-availability"><span class="availability-dot"></span> Nhận booking</div>
+        </section>
 
-          <div class="about-content">
-            <div class="about-text">
+        <section id="about" class="about-section section-block">
+          <div class="section-kicker"><span>01 / Hồ sơ</span><span>ABOUT</span></div>
+          <div class="about-grid">
+            <h2>Hiện đại trong thần thái.<br /><em>Tự nhiên trước ống kính.</em></h2>
+            <div class="about-copy">
               <p>
-                Tôi là một model nam trẻ với vẻ ngoài khỏe khoắn, góc nhìn thời trang rõ ràng và thái độ làm việc chuyên nghiệp.
-                Với dáng người cân đối, body săn chắc và vai rộng, tôi phù hợp với nhiều phong cách từ thời trang cao cấp đến thương hiệu lifestyle hiện đại.
+                Tôi là Lê Quốc Anh Cao, người mẫu nam theo đuổi hình ảnh nam tính, chỉn chu và linh hoạt. Từ thời trang đến lifestyle, tôi luôn hướng đến những khung hình có cảm xúc và kể được câu chuyện của thương hiệu.
               </p>
               <p>
-                Tôi sẵn sàng hợp tác với agency, studio, brand, production house và các dự án cần hình ảnh nam tính, tự tin và ấn tượng.
-                Mỗi shoot của tôi đều hướng tới sự tự nhiên, sắc sảo và khả năng truyền tải thông điệp thương hiệu một cách rõ nét.
+                Sẵn sàng hợp tác cùng agency, studio, nhãn hàng và ê-kíp sáng tạo trong các dự án hình ảnh, quảng cáo và sự kiện.
               </p>
-            </div>
-
-            <div class="info-card">
-              <div class="info-row">
-                <span>Chiều cao</span>
-                <strong>1m80</strong>
-              </div>
-              <div class="info-row">
-                <span>Cân nặng</span>
-                <strong>68kg</strong>
-              </div>
-              <div class="info-row">
-                <span>Tuổi</span>
-                <strong>21</strong>
-              </div>
-              <div class="info-row">
-                <span>Body</span>
-                <strong>Gọn, không mỡ, vai rộng</strong>
-              </div>
+              <div class="specialties" id="skills-list" aria-label="Lĩnh vực hợp tác"></div>
             </div>
           </div>
         </section>
 
-        <section class="section skill-section">
-          <div class="section-heading center">
-            <p class="eyebrow">Kỹ năng</p>
-            <h2>Những thế mạnh tôi mang đến cho dự án</h2>
-          </div>
-          <div class="skills" id="skills-list"></div>
-        </section>
-
-        <section id="portfolio" class="section portfolio-section">
-          <div class="section-heading between">
-            <div>
-              <p class="eyebrow">Portfolio</p>
-              <h2>Ảnh nổi bật</h2>
-            </div>
-            <a href="#booking" class="text-link">Booking ngay</a>
+        <section id="portfolio" class="portfolio-section section-block">
+          <div class="section-kicker"><span>02 / Portfolio</span><span>SELECTED WORKS</span></div>
+          <div class="portfolio-heading">
+            <h2>Một vài <em>khung hình.</em></h2>
+            <p>Chân dung, thời trang và những sắc thái khác nhau trước ống kính.</p>
           </div>
           <div class="gallery-grid" id="gallery-grid"></div>
         </section>
 
-        <section id="videos" class="section video-section">
-          <div class="section-heading left">
-            <p class="eyebrow">Video</p>
-            <h2>Showreel & video profile</h2>
-          </div>
-
-          <div class="video-layout">
-            <div class="video-feature">
-              <video
-                id="main-video"
-                controls
-                playsinline
-                preload="metadata"
-                poster="assets/images/IMG_3713.jpeg"
-              >
-                <source src="assets/images/1.mp4" type="video/mp4" />
-              </video>
+        <section id="showreel" class="showreel-section section-block">
+          <div class="section-kicker"><span>03 / Chuyển động</span><span>SHOWREEL</span></div>
+          <div class="showreel-grid">
+            <div class="showreel-copy">
+              <p class="eyebrow">In motion</p>
+              <h2>Không chỉ là<br /><em>một khung hình.</em></h2>
+              <p>Video profile và chuyển động trong các dự án hình ảnh.</p>
+              <span class="reel-count">01&nbsp; / &nbsp;SHOWREEL</span>
             </div>
-
-            <aside class="video-list" id="video-list"></aside>
+            <video
+              id="main-video"
+              controls
+              playsinline
+              preload="metadata"
+              poster="assets/images/798A4903_Original.JPG"
+              aria-label="Showreel của Lê Quốc Anh Cao"
+            >
+              <source src="assets/images/1.mp4" type="video/mp4" />
+              Trình duyệt của bạn không hỗ trợ phát video.
+            </video>
           </div>
         </section>
 
-        <section id="booking" class="section booking-section">
-          <div class="booking-panel">
-            <div class="booking-copy">
-              <p class="eyebrow">Booking</p>
-              <h2>Sẵn sàng hợp tác với brand, agency và studio chuyên nghiệp.</h2>
-              <p>
-                Tôi mở cửa cho các cơ hội từ campaign thương hiệu, shoot thời trang, nội dung quảng cáo,
-                event, popup, livestream và các dự án cần hình ảnh nam tính, hiện đại và có sức hút.
-              </p>
-              <div class="contact-list">
-                <span>Phone / Zalo: 0368309653</span>
-                <span>Facebook: <a href="https://www.facebook.com/qanh.le.771/" target="_blank" rel="noreferrer">qanh.le.771</a></span>
-                <span>Booking: Tư vấn, hợp tác và chụp hình theo yêu cầu dự án</span>
-              </div>
+        <section id="booking" class="booking-section">
+          <div class="booking-topline"><span>04 / Booking</span><span>LET'S WORK TOGETHER</span></div>
+          <div class="booking-grid">
+            <div>
+              <p class="eyebrow">Dành cho dự án tiếp theo</p>
+              <h2>Cùng tạo nên<br /><em>điều đáng nhớ.</em></h2>
             </div>
-
-            <div class="booking-card">
-              <h3>Thông tin nhanh</h3>
-              <ul>
-                <li>Available for fashion editorial</li>
-                <li>Commercial & brand campaigns</li>
-                <li>Event & live appearance</li>
-                <li>Social / short-form video</li>
-              </ul>
-              <a href="tel:+84368309653" class="btn btn-primary full-width">Gọi / Zalo booking</a>
+            <div class="booking-details">
+              <p>Nhận hợp tác cho fashion editorial, commercial, brand campaign, event và nội dung số.</p>
+              <a class="booking-phone" href="tel:+84368309653">0368 309 653 <span aria-hidden="true">↗</span></a>
+              <a class="booking-social" href="https://www.facebook.com/qanh.le.771/" target="_blank" rel="noreferrer">Facebook · qanh.le.771 <span aria-hidden="true">↗</span></a>
             </div>
           </div>
         </section>
       </main>
 
       <footer class="site-footer">
-        <p>© <span id="year"></span> Lê Quốc Anh. All rights reserved.</p>
+        <a class="footer-brand" href="#top">Lê Quốc Anh Cao</a>
+        <span>Model · Brand talent</span>
+        <span>© <span id="year"></span></span>
       </footer>
     </div>
 
